@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Manrope } from "next/font/google";
+import { MapPinIcon, Bars3Icon } from "@heroicons/react/24/solid";
 
 const manropeFont = Manrope({ subsets: ["latin"] })
 
@@ -19,7 +20,22 @@ export default function RootLayout({
       lang="en"
       className={`${manropeFont.className} h-full`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <header className="w-full px-5 pt-4 flex justify-between  bg-fundo">
+          <div className="flex gap-2">
+            <div className="w-6 h-6 flex items-center justify-center rounded-full bg-azul">
+            <MapPinIcon className="w-4 text-branco"></MapPinIcon>
+            </div>
+            <p className="text-branco font-bold">VagaJá</p>
+          </div>
+
+          <div>
+          <Bars3Icon className="w-6 text-branco"></Bars3Icon>
+          </div>
+        </header>
+
+        {children}
+      </body>
     </html>
   );
 }
