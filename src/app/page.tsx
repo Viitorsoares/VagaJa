@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="mt-10 flex flex-col gap-4">
         <button className="bg-azul py-3 rounded-2xl">
-            <Link href={"/maps"} className="text-branco">Sou Motorista - Ver Vagas</Link>
+            <Link href={"/driver"} className="text-branco">Sou Motorista - Ver Vagas</Link>
         </button>
         <button className="bg-roxo py-3 rounded-2xl">
             <Link href={""} className="text-branco">Sou Agente - Área Restrita</Link>

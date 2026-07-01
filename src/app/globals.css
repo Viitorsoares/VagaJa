@@ -11,6 +11,11 @@
   --color-roxo: #7C3AED;
   --color-branco: #fff;
   --color-bermuda: #78dcca;
+  --color-green: #38b000;
+  --color-orange: #ff9f1c;
+  --color-red: #e5383b;
+
+  --text-badge: 1rem; 
 }
 
 @theme inline {

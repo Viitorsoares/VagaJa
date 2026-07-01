@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Manrope, Geist } from "next/font/google";
-import { MapPinIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import { cn } from "@/src/lib/utils";
+import Header from "../components/common/header";
+import Footer from "../components/common/footer";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -19,25 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn("h-full", manropeFont.className, "font-sans", geist.variable)}
-    >
-      <body className="min-h-full flex flex-col">
-        <header className="w-full px-6 pt-3 flex justify-between bg-fundo">
-          <div className="flex gap-1.5">
-            <div className="w-7 h-7 flex items-center justify-center rounded-full bg-azul">
-            <MapPinIcon className="w-4 text-branco"></MapPinIcon>
-            </div>
-            <p className="text-branco text-xl font-extrabold">vagajá</p>
-          </div>
-
-          <div>
-          <Bars3Icon className="w-8 text-branco"></Bars3Icon>
-          </div>
-        </header>
-
+    <html lang="en" className={cn("h-full", manropeFont.className, "font-sans", geist.variable)}>
+      <body className="w-full flex flex-col">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
