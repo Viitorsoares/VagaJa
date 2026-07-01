@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Manrope } from "next/font/google";
+import { Manrope, Geist } from "next/font/google";
 import { MapPinIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { cn } from "@/src/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const manropeFont = Manrope({ subsets: ["latin"] })
 
@@ -18,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manropeFont.className} h-full`}
+      className={cn("h-full", manropeFont.className, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">
         <header className="w-full px-6 pt-3 flex justify-between bg-fundo">
