@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="mt-10">
                 <div className="mb-10">
                     <h2 className="text-branco font-extrabold pb-3">Serviços</h2>
-                    <div className="text-gray-text flex flex-col gap-3">
+                    <div className="text-gray-text  flex flex-col gap-3">
                         <p>Mapa de Vagas</p>
                         <p>Área do Agente</p>
                         <p>Cadastro de Agente</p>
@@ -85,7 +85,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="text-gray-text mt-10 flex flex-col gap-2">
+            <div className="text-gray-text mt-10 mb-6 flex flex-col gap-2">
                 <p>
                     © 2026 ParkUrban Tecnologia e Mobilidade Urbana Ltda. 
                     Todos os direitos reservados.
